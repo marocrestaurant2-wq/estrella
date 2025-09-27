@@ -1,128 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Privacy Policy (Website) — ESTRELLA HOLDING</title>
-    <meta name="description" content="Privacy policy for the ESTRELLA HOLDING website, covering data we collect, how we use it, and your rights." />
-    <link rel="icon" href="logo.webp" type="image/webp" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <a href="#content" class="skip-link">Skip to content</a>
-    <header class="site-header">
-      <div class="container wrap">
-        <a href="index.html" class="brand" aria-label="ESTRELLA HOLDING Home">
-          <img src="logo.webp" alt="ESTRELLA HOLDING logo" class="logo" />
-          <span class="brand-text">ESTRELLA HOLDING</span>
-        </a>
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
-          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-        </button>
-        <nav class="site-nav" id="primary-nav">
-          <a href="index.html">Home</a>
-          <a href="about.html">About Us</a>
-          <a href="services.html">Services</a>
-          <a href="app.html">App <span class="pill">Soon</span></a>
-          <a href="contact.html">Contact</a>
-          <a href="privacy-website.html">Privacy</a>
-        </nav>
-      </div>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Estrella Holding</title>
+  <style>
+    :root{
+      --bg:#0f172a; --panel:#111827; --muted:#94a3b8; --text:#e5e7eb;
+      --primary:#60a5fa; --accent:#22d3ee; --ok:#34d399; --warn:#f59e0b;
+      --radius:16px; --shadow:0 10px 30px rgba(0,0,0,.25);
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#f8fafc; --panel:#ffffff; --muted:#475569; --text:#0f172a;
+             --primary:#2563eb; --accent:#0891b2; --ok:#059669; --warn:#d97706; }
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:var(--sans); background:
+      radial-gradient(1200px 700px at 10% -10%, rgba(34,211,238,.08), transparent 60%),
+      radial-gradient(1200px 700px at 90% 10%, rgba(96,165,250,.10), transparent 60%),
+      var(--bg); color:var(--text); line-height:1.65;
+    }
+    .container{max-width:980px; margin:32px auto 80px; padding:0 20px;}
+    header.hero{
+      padding:40px 24px; background:linear-gradient(135deg, rgba(34,211,238,.18), rgba(96,165,250,.18));
+      border:1px solid rgba(148,163,184,.25); border-radius:var(--radius); box-shadow:var(--shadow);
+    }
+    .badge{display:inline-flex; gap:8px; align-items:center; background:rgba(34,211,238,.12);
+      color:var(--accent); border:1px solid rgba(34,211,238,.35); padding:6px 10px; border-radius:999px; font-size:13px; margin-bottom:12px;}
+    header.hero h1{margin:0 0 8px; font-size:clamp(24px,3.5vw,40px);}
+    header.hero p{margin:6px 0 0; color:var(--muted); font-size:clamp(14px,1.6vw,17px);}
+    nav.toc{margin:24px 0 28px; display:flex; flex-wrap:wrap; gap:10px;}
+    nav.toc a{
+      text-decoration:none; padding:10px 14px; color:var(--text);
+      border:1px solid rgba(148,163,184,.25); border-radius:12px; background:var(--panel);
+      box-shadow:0 4px 14px rgba(0,0,0,.1); transition:.2s;
+    }
+    nav.toc a:hover{transform:translateY(-2px); border-color:var(--primary); box-shadow:0 10px 22px rgba(37,99,235,.18)}
+    section.card{
+      background:var(--panel); border:1px solid rgba(148,163,184,.22); border-radius:var(--radius);
+      box-shadow:var(--shadow); padding:22px 20px; margin:16px 0;
+    }
+    section.card h2{margin:6px 0 8px; font-size:clamp(18px,2.2vw,24px);}
+    .muted{color:var(--muted)} .ok{color:var(--ok);font-weight:600} .warn{color:var(--warn);font-weight:600}
+    code.kbd{font-family:var(--mono); background:rgba(148,163,184,.15); padding:2px 6px; border-radius:6px; border:1px solid rgba(148,163,184,.25); font-size:13px;}
+    a.inline{color:var(--primary); text-decoration:none; border-bottom:1px dashed rgba(37,99,235,.4);}
+    footer{margin-top:30px; color:var(--muted); font-size:14px; text-align:center;}
+    @media print{ body{background:#fff;color:#111} header.hero, section.card{box-shadow:none} nav.toc{display:none} }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <div class="badge">Privacy • No data collected</div>
+      <h1>Privacy Policy — Estrella Holding</h1>
+      <p>Last updated: September 2025 • This policy explains how the App operates and how your information is handled.</p>
+      <nav class="toc" aria-label="Table of contents">
+        <a href="#intro">Introduction</a>
+        <a href="#overview">Overview</a>
+        <a href="#no-collect">No data collection</a>
+        <a href="#local">Local inputs</a>
+        <a href="#sharing">User-initiated sharing</a>
+        <a href="#storage">Local storage</a>
+        <a href="#children">Children</a>
+        <a href="#security">Security</a>
+        <a href="#changes">Changes</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
 
-    <main id="content">
-      <section class="section" style="background: var(--black); color: var(--white);">
-        <div class="container">
-          <h1 style="font-size: clamp(26px, 4vw, 40px);" class="reveal">Privacy Policy (Website)</h1>
-          <p class="reveal" style="color:#EDEDED; max-width:780px;">This policy explains how we collect, use, and safeguard personal data when you visit our website.</p>
-        </div>
+    <main>
+      <section id="intro" class="card">
+        <h2>1) Introduction</h2>
+        <p>Welcome to the <strong>Estrella Holding</strong> mobile application (the “App”). We respect your privacy and design our software to minimize data collection. By using the App, you agree to this Privacy Policy.</p>
       </section>
 
-      <section class="section">
-        <div class="container grid two">
-          <div class="reveal">
-            <h2>Who We Are</h2>
-            <p>ESTRELLA HOLDING — SARL AU, headquartered at 45 Rue Alhaj Elattawi, Rés AlRiyad 36, Tranche 316, Local 2A, Tangier‑Médina, 90000.</p>
-            <p>RC: 110823 — ICE: 002635954000082 — Capital: 100,000 MAD.</p>
-          </div>
-          <div class="reveal">
-            <h2>Data We Collect</h2>
-            <p>
-              - Contact details you submit via the contact form (name, email, phone, message).<br/>
-              - Technical logs automatically provided by your browser (e.g., IP address, device, pages viewed, timestamps) for security and analytics.
-            </p>
-          </div>
-          <div class="reveal">
-            <h2>How We Use Data</h2>
-            <p>
-              - To respond to your inquiries and provide requested information.<br/>
-              - To operate, secure, and improve our website and services.<br/>
-              - To comply with applicable legal obligations.
-            </p>
-          </div>
-          <div class="reveal">
-            <h2>Legal Bases</h2>
-            <p>We process personal data based on legitimate interest (site operation and security), consent (when you submit forms), and legal obligation when applicable.</p>
-          </div>
-          <div class="reveal">
-            <h2>Retention</h2>
-            <p>We retain contact submissions for as long as necessary to address your request and for a reasonable period thereafter, unless the law requires a longer period.</p>
-          </div>
-          <div class="reveal">
-            <h2>Sharing</h2>
-            <p>We do not sell personal data. We may share limited data with service providers that help us operate the website (under confidentiality obligations) or as required by law.</p>
-          </div>
-          <div class="reveal">
-            <h2>Your Rights</h2>
-            <p>Subject to applicable law, you may request access, correction, deletion, or restriction of your data, or object to processing. Contact us via <a href="mailto:contact@estrella.ma">contact@estrella.ma</a>.</p>
-          </div>
-          <div class="reveal">
-            <h2>Security</h2>
-            <p>We implement technical and organizational measures to protect personal data against unauthorized access, alteration, disclosure, or destruction.</p>
-          </div>
-          <div class="reveal">
-            <h2>International Transfers</h2>
-            <p>Where data is transferred outside your jurisdiction, we apply appropriate safeguards consistent with applicable data protection laws.</p>
-          </div>
-          <div class="reveal">
-            <h2>Contact</h2>
-            <p>For privacy inquiries, email <a href="mailto:contact@estrella.ma">contact@estrella.ma</a>.</p>
-          </div>
-          <div class="reveal">
-            <h2>Updates</h2>
-            <p>We may update this policy from time to time. The latest version is published on this page with the effective date.</p>
-          </div>
-        </div>
+      <section id="overview" class="card">
+        <h2>2) Overview</h2>
+        <p>The App provides access to property listings, company services, mortgage tools, and news — all <strong>fully offline</strong>.</p>
+        <ul>
+          <li>No sign-in or account creation</li>
+          <li>No analytics, ads, or tracking SDKs</li>
+          <li>No network calls; the App does <em>not</em> request the <code class="kbd">INTERNET</code> permission</li>
+        </ul>
+      </section>
+
+      <section id="no-collect" class="card">
+        <h2>3) Information We Do <em>Not</em> Collect</h2>
+        <p class="ok">We do <strong>not collect</strong>, store, or share personal data with our servers or third parties.</p>
+        <ul>
+          <li>No personal identifiers (name, email, phone) are sent to us</li>
+          <li>No device or usage data is transmitted</li>
+          <li>No location, camera, or files access</li>
+        </ul>
+      </section>
+
+      <section id="local" class="card">
+        <h2>4) Information You May Provide Locally</h2>
+        <p>You may optionally enter details in the contact form (e.g., name, email, phone, subject, message) or mortgage values. These inputs are processed <strong>only on your device</strong> to create a local PDF/CSV or to prefill a message.</p>
+        <p class="warn">Nothing is uploaded automatically.</p>
+      </section>
+
+      <section id="sharing" class="card">
+        <h2>5) User-Initiated Sharing</h2>
+        <p>If you choose to contact us, the App opens your preferred communication app (Email, WhatsApp, or Phone). Sharing is <strong>initiated and confirmed by you</strong> and handled by those external apps, not by Estrella Holding.</p>
+      </section>
+
+      <section id="storage" class="card">
+        <h2>6) Local Storage & Retention</h2>
+        <p>Any files you create (PDF/CSV) remain on your device. You may delete them at any time. We do not keep copies on remote servers.</p>
+      </section>
+
+      <section id="children" class="card">
+        <h2>7) Children’s Privacy</h2>
+        <p>The App is intended for general audiences and is not directed to children under 13. Because we do not collect data, no personal information is obtained from any user.</p>
+      </section>
+
+      <section id="security" class="card">
+        <h2>8) Security</h2>
+        <p>Since the App does not transmit data online, there is no remote collection. Local information remains protected by your device’s security (PIN, password, fingerprint).</p>
+      </section>
+
+      <section id="changes" class="card">
+        <h2>9) Changes to This Policy</h2>
+        <p>We may update this Policy if functionality changes (for example, adding online features). The latest version will be published in the App and on our website.</p>
+      </section>
+
+      <section id="contact" class="card">
+        <h2>10) Contact</h2>
+        <p>Questions? Reach us at:</p>
+        <ul>
+          <li>Email: <a class="inline" href="mailto:reservation@estrellaholding.art">reservation@estrellaholding.art</a></li>
+          <li>Phone: <a class="inline" href="tel:+212778924705">+212 778 924 705</a></li>
+          <li>Website: <a class="inline" href="https://www.estrellaholding.art" target="_blank" rel="noopener">https://www.estrellaholding.art</a></li>
+        </ul>
       </section>
     </main>
 
-    <footer class="site-footer section">
-      <div class="container grid">
-        <div class="footer-brand">
-          <img src="logo.webp" alt="ESTRELLA HOLDING logo" />
-          <p class="muted">Excellence in real estate, construction, trade, and investment management.</p>
-        </div>
-        <div>
-          <h4>Quick Links</h4>
-          <p><a href="about.html">About Us</a></p>
-          <p><a href="services.html">Services</a></p>
-          <p><a href="contact.html">Contact</a></p>
-          <p><a href="privacy-website.html">Privacy Policy</a></p>
-        </div>
-        <div>
-          <h4>Company</h4>
-          <p>ESTRELLA HOLDING — SARL AU</p>
-          <p>45 Rue Alhaj Elattawi, Rés AlRiyad 36,<br/>Tranche 316, Local 2A, Tangier‑Médina, 90000</p>
-          <p>RC: 110823 — ICE: 002635954000082 — Capital: 100,000 MAD</p>
-        </div>
-      </div>
-      <div class="container">
-        <p class="legal">© 2025 ESTRELLA HOLDING. All rights reserved.</p>
-      </div>
+    <footer>
+      © <span id="year"></span> Estrella Holding. All rights reserved.
     </footer>
-
-    <button id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
-    <script src="main.js"></script>
-  </body>
-  </html>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
